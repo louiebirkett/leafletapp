@@ -1,2 +1,11 @@
 ### GET
 GET http://localhost:8080/objects
+
+### POST
+POST http://localhost:8080/objects?id=4?name=car?comment=fart
+
+### POST
+POST http://localhost:8080/objects
+content-type: application/x-www-form-urlencoded
+
+id=5X&name=testname&comment=hello%20comment
