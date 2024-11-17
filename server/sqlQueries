@@ -1,11 +1,26 @@
+-- 
 CREATE TABLE skipObjects (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name text NOT NULL,
-    comment text
+    comment TEXT,
+    latitude REAL,
+    longitude REAL,
+    imagePath TEXT    
 );
 
-
+-- 
 INSERT INTO skipObjects (name, comment)
 VALUES ('Sofa','My Mums Old Sofa'),
        ('Fridge','An Old Fridge'),
        ('Bicycle','Sons old bike');
+
+-- 
+select * FROM skipObjects;
+
+-- 
+-- INSERT INTO skipObjects(
+--     imagePath TEXT
+-- );
+
+
+
