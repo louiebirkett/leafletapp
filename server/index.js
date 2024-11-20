@@ -1,17 +1,20 @@
 var express = require('express');
+const cors = require('cors');
 var bodyParser = require('body-parser');
 const objects = require('./objects');
+
+
 
 var app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(cors());
 
 
 // GET ALL
 app.get("/objects", async function(req, res) {
     const allObjects = await objects.getObjects();
     res.send(allObjects);
-    
 });
 
 // GET OBJECT

@@ -3,18 +3,18 @@ CREATE TABLE skipObjects (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name text NOT NULL,
     comment TEXT,
-    latitude REAL,
     longitude REAL,
+    latitude REAL,
     imagePath TEXT    
 );
 
 -- 
-INSERT INTO skipObjects (name, comment)
-VALUES ('Sofa','My Mums Old Sofa'),
-       ('Fridge','An Old Fridge'),
-       ('Bicycle','Sons old bike');
+INSERT INTO skipObjects (name, comment, latitude, longitude)
+VALUES ('Sofa','My Mums Old Sofa', '50.8317096056956', '-0.13672654085055594'), --50.8317096056956, -0.13672654085055594
+       ('Fridge','An Old Fridge', '50.83151369255988', '-0.12860779514067594'), -- 50.83151369255988, -0.12860779514067594
+       ('Bicycle','Sons old bike','50.827937483573145', '-0.134622665254024'); -- 50.827937483573145, -0.134622665254024
 
--- 
+--  
 select * FROM skipObjects;
 
 -- 
