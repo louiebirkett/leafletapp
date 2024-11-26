@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
       const fileExtension = path.extname(file.originalname); // Get the file extension
       const fileName = Date.now() + fileExtension;  // Create a unique file name
-      cb(null, fileName);  // Save the file with the new unique name
+      cb(null, fileName + 'jpg');  // Save the file with the new unique name
     }
   });
 
