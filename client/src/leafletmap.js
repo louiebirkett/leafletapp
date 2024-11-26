@@ -6,6 +6,8 @@ import L from 'leaflet';
 import 'leaflet-defaulticon-compatibility';
 
 
+
+
 const url = process.env.API_URL // url for REST API
 
 const popupImage = "https://www.jdogjunkremoval.com/wp-content/uploads/2020/01/scrap-metal.jpg"; // Example image for the popup
@@ -23,7 +25,7 @@ const LeafletMap = () => {
     useEffect(() => {
       const fetchMarkers = async () => {  //Fetch call for markers
         try {
-          const response = await fetch(process.env.API_URL);
+          const response = await fetch(url);
           const data = await response.json();
           setMarkers(data);
           console.log(data);
