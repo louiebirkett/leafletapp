@@ -11,11 +11,11 @@ CREATE TABLE skipObjects (
 -- 
 INSERT INTO skipObjects (name, comment, latitude, longitude, imagePath)
 VALUES ('Sofa','My Mums Old Sofa', '50.8317096056956', '-0.13672654085055594', ''), --50.8317096056956, -0.13672654085055594
-       ('Fridge','An Old Fridge', '50.83151369255988', '-0.12860779514067594'), -- 50.83151369255988, -0.12860779514067594
-       ('Bicycle','Sons old bike','50.827937483573145', '-0.134622665254024'); -- 50.827937483573145, -0.134622665254024
+       ('Fridge','An Old Fridge', '50.83151369255988', '-0.12860779514067594', ''), -- 50.83151369255988, -0.12860779514067594
+       ('Bicycle','Sons old bike','50.827937483573145', '-0.134622665254024', ''); -- 50.827937483573145, -0.134622665254024
 
 --  
-select * FROM skipObjects;
+SELECT * FROM skipObjects;
 
 -- 
 -- INSERT INTO skipObjects(

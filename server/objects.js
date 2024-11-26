@@ -25,16 +25,19 @@ function getObjectById(id){
 }
 
 // POST OBJECT
-function  addObject(name, comment){
-    return new Promise((resolve, rejects) => {
-        db.run('INSERT INTO skipObjects (name, comment) VALUES (?, ?)', name, comment, (err) => {
-            if(err)
-                reject(err);
-            else
-                resolve();
-        });
+function addObject(name, comment, latitude, longitude, imagePath) {
+    return new Promise((resolve, reject) => {
+        db.run(
+            'INSERT INTO skipObjects (name, comment, latitude, longitude, imagePath) VALUES (?, ?, ?, ?, ?)',
+            [name, comment, latitude, longitude, imagePath],
+            (err) => {
+                if (err) reject(err);
+                else resolve();
+            }
+        );
     });
 }
+
 
 // PUT OBJECT
 function editObject(id, name, comment){
